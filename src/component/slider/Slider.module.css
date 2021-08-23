@@ -1,0 +1,59 @@
+.landing {
+    background-color: rgb(255, 128, 0);
+    height: 680px;
+    position: relative;
+  }
+  
+.landing .landingContent {
+    padding-top: 200px;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+    width: 90%;
+    height: 100%;
+  }
+  .landing .landingContent h1 {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .landing .landingContent input {
+    display: block;
+    margin: 40px auto 35px auto;
+    width: 50%;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    border-radius: 24px;
+    text-align: center;
+  }
+  ::placeholder {
+    text-align: center;
+  }
+  .landing .landingContent input:focus {
+    border: none;
+    outline: none;
+  }
+  .landing .landingContent a {
+    background-color: #ff0;
+    padding: 10px 20px;
+    display: block;
+    width: 200px;
+    text-align: center;
+    border-radius: 24px;
+    margin: 0 auto;
+  }
+  .landing .landingContent a:hover {
+    box-shadow: 5px 5px 16px 3px #000;
+  }
+  .landing img {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1280px;
+    width: 50%;
+  }
