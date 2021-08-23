@@ -1,0 +1,28 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'estedad';
+}
+html {
+  height: 100%;
+  direction: rtl;
+}
+body {
+  background-color: #ccc;
+  position: relative;
+  height: 100%;
+}
+a{
+  text-decoration: none;
+}
+.App{
+  position: relative;
+  height: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: aqua;
+}
