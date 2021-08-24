@@ -1,4 +1,4 @@
-.header{
+.header {
     position: sticky;
     top: 0;
     z-index: 3;
@@ -10,49 +10,49 @@
     justify-content: space-between;
     align-items: center;
     height: 65px;
-  }
-  .header .nav .rightNav {
+}
+.header .nav .rightNav {
     display: flex;
-  }
-  .header .nav .rightNav img {
+}
+.header .nav .rightNav img {
     margin-right: 20px;
     height: 45px;
-  }
-  .header .nav .rightNav ul {
+}
+.header .nav .rightNav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .header .nav .rightNav ul li {
+}
+.header .nav .rightNav ul li {
     list-style: none;
     margin-right: 25px;
-  }
-  .header .nav .rightNav ul li a {
+}
+.header .nav .rightNav ul li a {
     transition: all 0.15s ease-in-out;
-  }
-  .header .nav .rightNav ul li a:hover {
+}
+.header .nav .rightNav ul li a:hover {
     color: #40e0d0;
-  }
-  .header .nav .leftNav a {
+}
+.header .nav .leftNav>a {
     border-radius: 24px;
     display: inline-block;
     border: 5px solid #ffff00;
     padding: 10px 20px;
     width: 100%;
     text-align: center;
-  }
-  .header .nav .leftNav {
+}
+.header .nav .leftNav {
     margin-left: 20px;
-  }
-  .header .nav .leftNav a:hover {
+}
+.header .nav .leftNav>a:hover {
     background-color: #ffff00;
     color: #fff;
-  }
-  
-  .dropdownItem {
+}
+
+.dropdownItem {
     z-index: 2;
-  }
-  /* .dropdownMenu>a {
+}
+#profile {
     border-radius: 24px;
     display: inline-block;
     border: 5px solid #ff0;
@@ -62,51 +62,48 @@
     text-align: center;
     background-color: #fff;
     transition: all 0.15s ease-in-out;
-  
-    
-  }
-  .dropdownMenu>a:hover {
+}
+#profile:hover {
     background-color: #ff0;
     color: #fff;
-    
-  }
-  
-  .dropdownMenu {
+}
+
+.dropdownMenu {
     width: 200px;
     margin-left: 20px;
-  }
-  
-  .dropdownItem {
+}
+
+.dropdownItem {
     display: none;
     position: absolute;
     border-radius: 0 0 15px 15px;
     background-color: #bbb;
     width: 200px;
     text-align: center;
-  }
-  .dropdownMenu:hover .dropdown-item{
+}
+.dropdownMenu:hover .dropdownItem {
     display: block;
-  }
-  .dropdownMenu:hover{
-     background-color: #bbb;
+}
+.dropdownMenu:hover {
+    background-color: #bbb;
     border-radius: 24px 24px 0 0;
-  }
-  .dropdownItem li {
+}
+.dropdownItem li{
     list-style: none;
     display: flex;
     height: 45px;
     justify-content: center;
     align-items: center;
     width: 100%;
-  }
-  .dropdownItem li:hover{
+}
+.dropdownItem li:hover {
     background-color: #ccc;
-  }
-  .dropdownMenu:hover #profile{
+}
+.dropdownMenu:hover #profile {
     background-color: #ff0;
     color: #fff;
-  }
-  
-  .dropdownItem{
+}
+
+.dropdownItem {
     padding: 10px 0 20px 0;
-  } */
+}

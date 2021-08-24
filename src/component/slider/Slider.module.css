@@ -33,7 +33,7 @@
     text-align: center;
   }
   .landing .landingContent input:focus {
-    border: none;
+    border: -1px solid aqua;
     outline: none;
   }
   .landing .landingContent a {

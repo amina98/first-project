@@ -39,7 +39,7 @@ class Product extends Component {
                     <div className={styles.counter}>
                         <i className="fas fa-plus" onClick={this.upHandler}></i>
                         <span>{counter}</span>
-                        <i className="fas fa-minus" onClick={this.downHandler}></i>
+                        <i className="fas fa-minus" id={counter<1 && styles.op} onClick={this.downHandler}></i>
                     </div>
                 </div>
                     <a href="#">اضافه کردن به سبد خرید</a>

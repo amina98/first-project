@@ -2,9 +2,15 @@ import React, { Component } from "react";
 
 import styles from "./Header.module.css";
 
-import Logo from '../../image/logo.jpg';
+import Logo from "../../image/logo.jpg";
 
 class Header extends Component {
+    constructor() {
+        super();
+        this.state = {
+            isLogged: true,
+        };
+    }
     render() {
         return (
             <header className={styles.header}>
@@ -28,17 +34,24 @@ class Header extends Component {
                     </div>
 
                     <div className={styles.leftNav}>
-                        <a href="./signup.html">ورود / ثبت نام</a>
-
-                        {/* <div className={styles.dropdownMenu}>
-                <a href="#" id="profile"
-                  >هادی <i className="fas fa-caret-down"></i
-                ></a>
-                <ul className={styles.dropdownItem}>
-                  <li><a href="#">پروفایل</a></li>
-                  <li><a href="#">خروج از حساب</a></li>
-                </ul>
-              </div> */}
+                        {this.state.isLogged ? (
+                            <div className={styles.dropdownMenu}>
+                                <a href="#" id={styles.profile}>
+                                    هادی <i className="fas fa-caret-down"></i>
+                                </a>
+                                <ul className={styles.dropdownItem}>
+                                    <li>
+                                        <a href="#">پروفایل</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">خروج از حساب</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        ) : (
+                            <a href="./signup.html">ورود / ثبت نام</a>
+                        )}
+                        
                     </div>
                 </nav>
             </header>
