@@ -1,6 +1,6 @@
 .landing {
-    background-color: rgb(255, 128, 0);
-    height: 680px;
+    /* background-color: rgb(255, 128, 0); */
+    height: calc(100vh - 70px);
     position: relative;
 }
 
@@ -97,7 +97,7 @@
 }
 
 .fade {
-    transform: fade;
+    animation: fade;
     animation-duration: 1.5s;
 }
 @keyframes fade {

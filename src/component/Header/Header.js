@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import styles from "./Header.module.css";
+import Timer from "./Timer";
 
 import Logo from "../../image/logo.jpg";
 
@@ -32,8 +33,8 @@ class Header extends Component {
                             </li>
                         </ul>
                     </div>
-
                     <div className={styles.leftNav}>
+                    <Timer />
                         {this.state.isLogged ? (
                             <div className={styles.dropdownMenu}>
                                 <a href="#" id={styles.profile}>

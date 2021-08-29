@@ -21,43 +21,38 @@ class Slider extends Component {
         this.showSlides((this.slideIndex += -1));
     };
     showSlides = (n) => {
-        console.log(this.slideIndex);
         if (n > this.mySlides.current.childNodes.length) {
             this.slideIndex = 1;
         }
         if (n < 1) {
             this.slideIndex= this.mySlides.current.childNodes.length;
         }
-        console.log(this.slideIndex);
         for (let i = 0; i < this.mySlides.current.childNodes.length; i++) {
             this.mySlides.current.childNodes[i].style.display = "none";
         }
         this.mySlides.current.childNodes[this.slideIndex - 1].style.display = "block";
         
     };
-    clickHandler = () => {
-        console.log(this.mySlides.current.childNodes);
-    };
+    
     render() {
         return (
             <div className={styles.landing}>
-                <img src={Landing} alt="landing" />
+                {/* <img src={Landing} alt="landing" /> */}
                 <div ref={this.mySlides} className={styles.slideshow}>
-                    <div className={styles.mySlides}  style={{display :"block"}}>
+                    <div className={`${styles.mySlides} ${styles.fade}`}  style={{display :"block"}}>
                         <img src={Img1} alt="slider" />
                     </div>
-                    <div className={styles.mySlides}>
+                    <div className={`${styles.mySlides} ${styles.fade}`}>
                         <img src={Img2} alt="slider" />
                     </div>
-                    <div className={styles.mySlides}>
+                    <div className={`${styles.mySlides} ${styles.fade}`}>
                         <img src={Img3} alt="slider" />
                     </div>
-                    <div className={styles.mySlides}>
+                    <div className={`${styles.mySlides} ${styles.fade}`}>
                         <img src={Img4} alt="slider" />
                     </div>
                 </div>
-                {/* <button onClick={this.nextSlides}>Next</button>
-                <button onClick={this.prevSlides}>prev</button> */}
+                
                 <a className={styles.prev} onClick={this.nextSlides}>
                     &#10094;
                 </a>

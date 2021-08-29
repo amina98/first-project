@@ -43,6 +43,8 @@
 }
 .header .nav .leftNav {
     margin-left: 20px;
+    display: flex;
+    align-items: center;
 }
 .header .nav .leftNav>a:hover {
     background-color: #ffff00;
