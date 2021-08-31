@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import {Link} from 'react-router-dom';
 
 import styles from "./Header.module.css";
 import Timer from "./Timer";
@@ -9,7 +10,7 @@ class Header extends Component {
     constructor() {
         super();
         this.state = {
-            isLogged: true,
+            isLogged: false,
         };
     }
     render() {
@@ -20,16 +21,16 @@ class Header extends Component {
                         <img src={Logo} alt="" />
                         <ul>
                             <li>
-                                <a href="index.html">صفحه اول</a>
+                                <Link to="/">صفحه اول</Link>
                             </li>
                             <li>
-                                <a href="#">تماس با ما</a>
+                                <Link to="/about-us">تماس با ما</Link>
                             </li>
                             <li>
-                                <a href="#">پشتیبانی</a>
+                                <Link to="/support">پشتیبانی</Link>
                             </li>
                             <li>
-                                <a href="#">محصولات</a>
+                                <Link to="#">محصولات</Link>
                             </li>
                         </ul>
                     </div>
@@ -50,7 +51,7 @@ class Header extends Component {
                                 </ul>
                             </div>
                         ) : (
-                            <a href="./signup.html">ورود / ثبت نام</a>
+                            <Link to="/sign-in">ورود / ثبت نام</Link>
                         )}
                         
                     </div>

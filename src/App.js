@@ -1,22 +1,24 @@
 import "./App.css";
 import Header from "./component/Header/Header";
-import Slider from "./component/slider/Slider";
-import SortNav from "./component/Sortnav/SortNav";
-import Products from "./component/Products/Products";
-import Filter from "./component/Products/Filter";
-import Footer from "./component/Footer/Footer";
+import Home from "./pages/Home";
+import Signup from "./component/Sign/SignUp";
+import Signin from "./component/Sign/SignIn";
+import AboutUs from './pages/AboutUs';
+
+import {Route, Switch} from 'react-router-dom';
+import SignUp from "./component/Sign/SignUp";
 
 function App() {
     return (
         <div className="App">
             <Header />
-            <Slider />
-            <SortNav />
-            <div className="container">
-            <Filter />
-            <Products />
-            </div>
-            <Footer />
+            <Switch>
+                <Route path="/sign-in" component={Signin} />
+                <Route path="/about-us" component={AboutUs} />
+                <Route path="/sign-up" component={SignUp} />
+                <Route path="/" component={Home} />
+            </Switch>
+            
         </div>
     );
 }

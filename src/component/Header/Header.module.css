@@ -29,6 +29,7 @@
 }
 .header .nav .rightNav ul li a {
     transition: all 0.15s ease-in-out;
+    color: #000;
 }
 .header .nav .rightNav ul li a:hover {
     color: #40e0d0;

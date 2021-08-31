@@ -1,0 +1,94 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 75px);
+    align-items: center;
+    justify-content: center;
+}
+.container form{
+    width: 70%;
+    margin: 35px 0;
+}
+.inputBox{
+    display: flex;
+    width: 100%;
+}
+.input{
+    flex: 1;
+    margin: 5px 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+input::placeholder{
+    text-align: right;
+}
+.input label{
+    background-color: aqua;
+    text-align: center;
+    padding: 10px;
+    display: inline-block;
+    width: 30%;
+    font-size: 1rem;
+}
+.input input{
+    font-size: 1rem;
+    width: 70%;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+.address{
+    height: 6rem;
+    display: flex;
+}
+.address textarea{
+    height: 6rem;
+    right: 14.5%;
+    width: 85.5%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    resize: none;
+}
+.address textarea::placeholder{
+    text-align: right;
+}
+.address label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14.5%;
+    height: 100%;
+}
+.container form button{
+    border-radius: 24px;
+    background-color: aqua;
+    padding: 10px 20px;
+    display: block;
+    width: 90%;
+    margin: 15px auto;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #aaa;
+    transition: 0.3s;
+    font-size: 1rem;
+
+    
+}
+.container form button:hover{
+    box-shadow: 0px 0px 10px #555;;
+    
+}
+.container form button:active{
+    transform: translateY(2px);
+}
+.container a{
+    color: #555;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+.container a:hover{
+    text-decoration: none;
+    color: blue;
+}
