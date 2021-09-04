@@ -1,4 +1,77 @@
-.container{
-    background-color: aqua;
+.container {
+    background-color: #fff;
     height: 500px;
+    padding: 15px;
+    position: sticky;
+    top: 85px;
+}
+.items {
+    position: relative;
+    height: 100%;
+}
+.costRange {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.costRange label {
+    align-self: flex-start;
+}
+.costRange span {
+    color: #d3d3d3;
+}
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    margin: 15px 0;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+}
+
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04aa6d;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #04aa6d;
+    cursor: pointer;
+}
+.container button {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #ff0;
+    padding: 10px 20px;
+    display: block;
+    text-align: center;
+    border-radius: 24px;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+.container button:hover {
+    box-shadow: 0px 0px 2px #d3d3d3;
+}
+.container button:active{
+    transform: translateY(2px);
 }

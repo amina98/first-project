@@ -2,7 +2,6 @@ import React, { Component } from "react";
 
 import styles from "./Slider.module.css";
 
-import Landing from "../../image/landing.png";
 import Img1 from "../../image/img1.jpg";
 import Img2 from "../../image/img2.jpg";
 import Img3 from "../../image/img3.jpg";
@@ -33,11 +32,12 @@ class Slider extends Component {
         this.mySlides.current.childNodes[this.slideIndex - 1].style.display = "block";
         
     };
-    
+    searchHandler = event=>{
+        event.preventDefault();
+    }
     render() {
         return (
             <div className={styles.landing}>
-                {/* <img src={Landing} alt="landing" /> */}
                 <div ref={this.mySlides} className={styles.slideshow}>
                     <div className={`${styles.mySlides} ${styles.fade}`}  style={{display :"block"}}>
                         <img src={Img1} alt="slider" />
@@ -53,12 +53,12 @@ class Slider extends Component {
                     </div>
                 </div>
                 
-                <a className={styles.prev} onClick={this.nextSlides}>
-                    &#10094;
-                </a>
-                <a className={styles.next} onClick={this.prevSlides}>
-                    &#10095;
-                </a>
+                <i className={`${styles.prev} fas fa-chevron-right`} onClick={this.nextSlides}>
+                    
+                </i>
+                <i className={`${styles.next} fas fa-chevron-left`} onClick={this.prevSlides}>
+                    
+                </i>
                 <div className={styles.landingContent}>
                     <h1>در محصولات سایت جستجو کنید ...</h1>
                     <br />
@@ -68,7 +68,7 @@ class Slider extends Component {
                         id=""
                         placeholder="نام محصول خود را وارد کنید ..."
                     />
-                    <a href="#">جستجو کنید</a>
+                    <button type="submit" onClick={this.searchHandler}>جستجو کنید</button>
                 </div>
             </div>
         );

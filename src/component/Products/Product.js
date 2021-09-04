@@ -35,14 +35,14 @@ class Product extends Component {
                 </div>
                 <hr />
                 <div className={styles.cost}>
-                    <span>{this.props.cost} تومان</span>
+                    <span className={styles.price}>{this.props.cost} تومان</span>
                     <div className={styles.counter}>
                         <i className="fas fa-plus" onClick={this.upHandler}></i>
                         <span>{counter}</span>
                         <i className={`fas fa-minus ${counter<1 && styles.op}`} onClick={this.downHandler}></i>
                     </div>
                 </div>
-                    <a href="#">اضافه کردن به سبد خرید</a>
+                    <a href="add">اضافه کردن به سبد خرید</a>
             </div>
         );
     }

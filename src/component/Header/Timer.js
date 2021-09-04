@@ -24,7 +24,6 @@ class Timer extends Component {
         if(s<10){
             s = `0${s}`;
         }
-        console.log(time)
         this.timer.current.innerText = `${h}:${m}:${s}`;},1000)
     }
     render() {

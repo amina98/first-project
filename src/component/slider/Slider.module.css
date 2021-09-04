@@ -1,6 +1,6 @@
 .landing {
     /* background-color: rgb(255, 128, 0); */
-    height: calc(100vh - 70px);
+    height: 685px;
     position: relative;
 }
 
@@ -37,7 +37,9 @@
     border: -1px solid aqua;
     outline: none;
 }
-.landing .landingContent a {
+.landing .landingContent button {
+    cursor: pointer;
+    border: none;
     background-color: #ff0;
     padding: 10px 20px;
     display: block;
@@ -46,7 +48,7 @@
     border-radius: 24px;
     margin: 0 auto;
 }
-.landing .landingContent a:hover {
+.landing .landingContent button:hover {
     box-shadow: 5px 5px 16px 3px #000;
 }
 .landing > img {

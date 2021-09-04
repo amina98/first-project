@@ -7,11 +7,18 @@ import Timer from "./Timer";
 import Logo from "../../image/logo.jpg";
 
 class Header extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             isLogged: false,
         };
+    }
+    clickHandler = ()=>{
+        this.setState({
+            isLogged : false,
+        })
+        this.props.status(false)
+        console.log('trrr')
     }
     render() {
         return (
@@ -30,23 +37,23 @@ class Header extends Component {
                                 <Link to="/support">پشتیبانی</Link>
                             </li>
                             <li>
-                                <Link to="#">محصولات</Link>
+                                <Link to="/products">محصولات</Link>
                             </li>
                         </ul>
                     </div>
                     <div className={styles.leftNav}>
                     <Timer />
-                        {this.state.isLogged ? (
+                        { this.props.logged ? (
                             <div className={styles.dropdownMenu}>
-                                <a href="#" id={styles.profile}>
+                                <a href="profile" id={styles.profile}>
                                     هادی <i className="fas fa-caret-down"></i>
                                 </a>
                                 <ul className={styles.dropdownItem}>
                                     <li>
-                                        <a href="#">پروفایل</a>
+                                        <a href="profile">پروفایل</a>
                                     </li>
                                     <li>
-                                        <a href="#">خروج از حساب</a>
+                                        <Link to="/" onClick={this.clickHandler}>خروج از حساب</Link>
                                     </li>
                                 </ul>
                             </div>

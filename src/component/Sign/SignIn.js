@@ -8,6 +8,7 @@ class SignIn extends Component {
         this.state = {
             email: "",
             password: "",
+            logged: false
         };
     }
     changeHandler = (event) => {
@@ -17,6 +18,10 @@ class SignIn extends Component {
     };
     clickHandler = (event) => {
         event.preventDefault();
+        this.setState({
+            logged : true,
+        });
+        this.props.logged(true)
     };
     render() {
         return (
@@ -44,7 +49,8 @@ class SignIn extends Component {
                         />
                     </div>
                     <button type="submit" onClick={this.clickHandler}>
-                        ورود
+                        <Link to="/">ورود</Link>
+                        
                     </button>
                 </form>
                 <span>
