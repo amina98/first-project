@@ -37,7 +37,7 @@
 .header .nav .leftNav>a {
     border-radius: 24px;
     display: inline-block;
-    border: 5px solid #ffff00;
+    border: 2px solid #ffff00;
     padding: 10px 20px;
     width: 100%;
     text-align: center;
@@ -58,7 +58,7 @@
 #profile {
     border-radius: 24px;
     display: inline-block;
-    border: 5px solid #ff0;
+    border: 2px solid #ff0;
     padding: 10px 20px;
     margin-left: 20px;
     width: 100%;
@@ -109,4 +109,13 @@
 
 .dropdownItem {
     padding: 10px 0 20px 0;
+}
+@media (max-width: 768px){
+    .header{
+        width: 100%;
+    }
+    .header .nav .rightNav ul{
+        display: none;
+    }
+    
 }

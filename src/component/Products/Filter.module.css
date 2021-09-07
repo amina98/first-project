@@ -5,6 +5,11 @@
     position: sticky;
     top: 85px;
 }
+@media(max-width: 1024px) {
+    .container{
+        position: static;
+    }
+}
 .items {
     position: relative;
     height: 100%;

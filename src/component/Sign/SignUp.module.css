@@ -13,6 +13,20 @@
     display: flex;
     width: 100%;
 }
+.inputBox .hidden{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.hidden span{
+    display: inline-block;
+    width: fit-content;
+    text-align: center;
+    /* color: red; */
+    background-color: red;
+    font-size: 0.8rem;
+    margin-right: 33%;
+}
 .input{
     flex: 1;
     margin: 5px 15px;
@@ -20,7 +34,7 @@
     overflow: hidden;
     
 }
-input::placeholder{
+.inputFeild::placeholder{
     text-align: right;
 }
 .input label{
@@ -31,11 +45,25 @@ input::placeholder{
     width: 30%;
     font-size: 1rem;
 }
-.input input{
+.input .inputFeild{
     font-size: 1rem;
     width: 70%;
     border: none;
     outline: none;
+    border-radius: 10px 0 0 10px;
+    padding: 10px;
+}
+.uncomplited:focus, .inputFeild:focus{
+    background-color: rgb(221, 221, 250);
+    border: 0.5px solid blue;
+}
+.uncomplited{
+    background-color: rgb(250, 222, 221);
+    border: 0.5px solid red;
+    font-size: 1rem;
+    width: 70%;
+    outline: none;
+    border-radius: 10px 0 0 10px;
     padding: 10px;
 }
 .address{

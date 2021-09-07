@@ -6,7 +6,7 @@ class Footer extends Component {
         return (
             <div className={styles.container}>
                 <p className={styles.footer}>
-                    تمامی حقوق برای توسعه دهنده <a href="https://google.com" title="amina98.ir">مهدی جعفرزاده</a> محفوظ است.
+                    تمامی حقوق برای توسعه دهنده <a href="https://github.com/amina98" rel="noreferrer" target="_blank" title="amina98.ir">مهدی جعفرزاده</a> محفوظ است.
                 </p>
             </div>
         );

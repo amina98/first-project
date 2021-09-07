@@ -1,26 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 import {Link} from 'react-router-dom';
 
 import styles from "./Header.module.css";
 import Timer from "./Timer";
-
 import Logo from "../../image/logo.jpg";
 
-class Header extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            isLogged: false,
-        };
+const Header = ()=> {
+    
+    const clickHandler = ()=>{
     }
-    clickHandler = ()=>{
-        this.setState({
-            isLogged : false,
-        })
-        this.props.status(false)
-        console.log('trrr')
-    }
-    render() {
         return (
             <header className={styles.header}>
                 <nav className={styles.nav}>
@@ -43,7 +31,7 @@ class Header extends Component {
                     </div>
                     <div className={styles.leftNav}>
                     <Timer />
-                        { this.props.logged ? (
+                        { false ? (
                             <div className={styles.dropdownMenu}>
                                 <a href="profile" id={styles.profile}>
                                     هادی <i className="fas fa-caret-down"></i>
@@ -53,7 +41,7 @@ class Header extends Component {
                                         <a href="profile">پروفایل</a>
                                     </li>
                                     <li>
-                                        <Link to="/" onClick={this.clickHandler}>خروج از حساب</Link>
+                                        <Link to="/" onClick={clickHandler}>خروج از حساب</Link>
                                     </li>
                                 </ul>
                             </div>
@@ -65,7 +53,6 @@ class Header extends Component {
                 </nav>
             </header>
         );
-    }
 }
 
 export default Header;
