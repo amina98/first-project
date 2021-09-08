@@ -11,7 +11,7 @@
 }
 .container form{
     margin: 35px 0;
-    width: 30%;
+    width: 50%;
 }
 .container form .input{
     width: 100%;
@@ -93,4 +93,11 @@
 .container a:hover{
     text-decoration: none;
     color: blue;
+}
+@media (max-width: 600px) {
+    .container form{
+        width: 90%;
+        
+    }
+    
 }
