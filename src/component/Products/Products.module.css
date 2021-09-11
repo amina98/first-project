@@ -4,11 +4,3 @@
     gap: 15px;
     height: 100%;
 }
-@media(max-width: 1024px){
-    .container{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly
-
-    }
-}

@@ -3,8 +3,44 @@
     grid-template-columns: repeat(4,1fr);
     gap: 15px;
     margin-top: 15px;
+    justify-items: center;
+    align-items: center;
+    flex-grow: 1;
 }
 
-img{
+/* img{
     height: 250px;
+} */
+
+@media only screen and (max-width: 505px){
+    .container{
+        grid-template-columns: repeat(1,auto);
+        gap: 5px;
+        height: 100%;
+    }
+
+}
+@media only screen and (min-width: 505px){
+    .container{
+        grid-template-columns: repeat(2, auto);
+        gap: 5px;
+    }
+    
+}
+@media only screen and (min-width: 768px){
+    .container{
+        grid-template-columns: repeat(3, auto);
+    }
+}
+@media only screen and (min-width: 1020px){
+    .container{
+        grid-template-columns: repeat(4, auto);
+    }
+}
+@media only screen and (min-width: 1200px){
+    .container{
+        grid-template-columns: auto auto auto auto;
+        gap: 15px;
+
+    }
 }

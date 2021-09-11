@@ -2,6 +2,10 @@
     height: 685px;
     position: relative;
 }
+.zoom{
+    height: 685px;
+    z-index: 1;
+}
 .landing .landingContent {
     padding-top: 200px;
     position: absolute;
@@ -10,6 +14,7 @@
     transform: translateX(50%);
     width: 90%;
     height: 100%;
+    z-index: 2;
 }
 .landing .landingContent h1 {
     font-size: 2rem;
@@ -94,3 +99,4 @@
         background-color: rgba(0, 0, 0, 1);
     }
 }
+

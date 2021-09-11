@@ -15,6 +15,7 @@ const App = () => {
     return (
         <div className="App">
             <Header />
+            <div className="main">
             <Switch>
                 <Route
                     path="/sign-in" component={Signin}
@@ -24,6 +25,7 @@ const App = () => {
                 <Route path="/products" component={Products} />
                 <Route path="/" component={Home} />
             </Switch>
+            </div>
             <Footer />
         </div>
     );

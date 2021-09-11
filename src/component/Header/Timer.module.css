@@ -6,3 +6,8 @@
     font-family: 'b nazanin';
     font-weight: bold;
 }
+@media (max-width: 480px) {
+    .container{
+        display: none;
+    }
+}

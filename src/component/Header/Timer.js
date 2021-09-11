@@ -28,7 +28,7 @@ class Timer extends Component {
     }
     render() {
         return (
-            <div>
+            <div className={styles.container}>
                 <p ref= {this.timer} className={styles.timer}></p>
             </div>
         );

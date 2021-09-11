@@ -1,75 +1,39 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
+import { Zoom } from "react-slideshow-image";
 
 import styles from "./Slider.module.css";
-
+import "react-slideshow-image/dist/styles.css";
+import './zoomSlider.css';
 import Img1 from "../../image/img1.jpg";
 import Img2 from "../../image/img2.jpg";
 import Img3 from "../../image/img3.jpg";
 import Img4 from "../../image/img4.jpg";
-let slideIndex = 1;
 
 const Slider = () => {
-    const image = useRef(null);
     const images = [Img1, Img2, Img3, Img4];
 
     const searchHandler = (event) => {
         event.preventDefault();
     };
-    const nextSlides = () => {
-        if (slideIndex >= images.length) {
-            slideIndex = 1;
-        } else if (slideIndex <= 0) {
-            slideIndex = images.length;
-        } else {
-            slideIndex += 1;
-        }
-        console.log(images[slideIndex - 1]);
-        image.current.style.backgroundImage = `url(${images[slideIndex - 1]})`;
+    const zoomInProperties = {
+        duration: 5000,
+        transitionDuration: 500,
+        infinite: true,
+        indicators: true,
+        scale: 1.4,
+        arrows: true,
     };
-    const prevSlides = () => {
-        if (slideIndex > images.length) {
-            slideIndex = 1;
-        } else if (slideIndex <= 1) {
-            slideIndex = images.length;
-        } else {
-            slideIndex -= 1;
-        }
-        image.current.style.backgroundImage = `url(${images[slideIndex - 1]})`;
-    };
-    useEffect(() => {
-        setInterval(() => {
-            if (slideIndex > images.length) {
-                slideIndex = 1;
-            } else if (slideIndex <= 1) {
-                slideIndex = images.length;
-            } else {
-                slideIndex -= 1;
-            }
-            image.current.style.backgroundImage = `url(${
-                images[slideIndex - 1]
-            })`;
-        }, 5000);
-    }, []);
-
     return (
-        <div className={styles.landing}>
-            <div
-                ref={image}
-                className={`${styles.slideshow} ${styles.fade}`}
-            ></div>
-
-            <i
-                className={`${styles.prev} fas fa-chevron-right`}
-                onClick={nextSlides}
-            ></i>
-            <i
-                className={`${styles.next} fas fa-chevron-left`}
-                onClick={prevSlides}
-            ></i>
-            <div className={styles.landingContent}>
-                <h1>در محصولات سایت جستجو کنید ...</h1>
-                <br />
-                <input
+        <div className={`${styles.landing} slide-container`}>
+                <Zoom {...zoomInProperties} >
+                    {images.map((each, index) => (
+                        <img key={index} className={styles.zoom} style={{ width: "100%" }} src={each} alt="slider"/>
+                    ))}
+                </Zoom>
+                <div className={styles.landingContent}>
+                 <h1>در محصولات سایت جستجو کنید ...</h1>
+                 <br />
+                 <input
                     type="text"
                     name=""
                     id=""
@@ -79,6 +43,7 @@ const Slider = () => {
                     جستجو کنید
                 </button>
             </div>
+             
         </div>
     );
 };
